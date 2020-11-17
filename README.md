@@ -1,8 +1,10 @@
-# lay-excel-vue 在VUE中一键导出
+# lay-excel-vue 在VUE中一键导出DEMO
 
-此项目为 [lay-excel](https://github.com/wangerzi/layui-excel) 的延展项目，在加入了 npm 支持后， VUE 中可使用 `import` 引入 `lay-excel`，使用导出方法一键导出数据到 XLSX 中。
+此项目为 [lay-excel](https://github.com/wangerzi/layui-excel) 项目的 **VUE demo**，在加入了 npm 支持后， VUE 中可使用 `import` 引入 `lay-excel`，使用导出方法一键导出数据到 XLSX 中。
 
 导出excel功能基于 XLSX.js，下载功能基于 FileSaver，读取文件基于 H5的 FileReader。
+
+> ！！！ 重要：这个项目只是 VUE 的使用 DEMO，源码在 lay-excel 项目中！！！
 
 **功能演示地址：** [http://excel.wj2015.com](http://excel.wj2015.com/)
 
@@ -12,11 +14,34 @@
 
 支持IE10+、Firefox、Chrome 等
 
+## 如何在项目中使用
+
+首先，安装 `lay-excel` package
+
+```shell
+$ npm i lay-excel
+```
+
+在你的代码逻辑中引入 `lay-excel`，并调用逻辑，如下是一个 `.vue` 文件的 `script `部分可供参考，作用是导出一个excel，内容是 "Hello", "World", "！" 三个单元格。
+
+```vue
+<script>
+import LAY_EXCEL from 'lay-excel';
+export default {
+  methods: {
+    handleExport() {
+      LAY_EXCEL.downloadExl([['Hello', 'World', '!']], 'hello', 'xlsx');
+    }
+  }
+}
+</script>
+```
+
 ## 快速入门
 
 一句话导出，快速上手请查看 [『快速上手』](http://excel.wj2015.com/_book/docs/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.html)，更多便捷函数请查看[『函数列表』](http://excel.wj2015.com/_book/docs/%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8/)，样式设置请查看[『样式设置专区』](http://excel.wj2015.com/_book/docs/%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE%E4%B8%93%E5%8C%BA.html)。
 
-## 运行方法
+## 如何运行DEMO
 
 首先克隆本项目，终端进入项目目录
 
