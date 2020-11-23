@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "lay-excel": "^1.7.3",
+    "lay-excel": "^1.7.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {
